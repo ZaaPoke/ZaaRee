@@ -1,37 +1,100 @@
-pye_�^C^@^@K�G^OI"0>����%["nǱf����p�%����^K�Q���^\��^P�܌V�*�f>
-�����
-^Nl)^S��b5l�^[�~�F^^�^^8��^Hك�^Gm�^DR^U�Z���qǗ�h^R&���� p|$O�>
-���؋U%�âV��{9^R�א^D>��^X��^Scܬ�gx}y>$\!F�
-�Pp�z��jQ��7f�z�^Y߈�:�>�7�^XM���!^T�0^B^?��D^]�z��Yt^Q�@HXi:�>
-�^Kځ%�m^W^?��^RZv'j^?^@�3��;v��i:���/^Y;`h�d��^X���V+\  �^\��>
-�+73B�G^Xg�_M�  �;^H�d5�^@^Or7�y�)l
-^Z^OWo@p���tNeΛ�!�^AP   �"��J����^U�
-*̏^Y^@G^_�`K�^]/��C��^U��8�^Q��^K^WE
-^]�^N��ӽ�B����@�%��^N���v>�^H,.^C6L���'8V4z�#��jq�p����)d4^B�>
-Õ�(���n���
-^??Q�$*�^@9l�
-���3��#"%^L?�"y���(�^F���^R�^Q
-^Ag�}*�^T�#��^V}^E���Y����+(�z_��^Yåp�w#���p��;'9�tO��f�%A^Z�>
-)=^V�"^&�w�b�^[R6���^O*��K`D0�^Tx��u�*���jW�Go�� ~�H��g��Ɏ�X�>
-�D��<V�7x��&���^N^T#�^Nx?��V��^D���%��)=_2�K�-��]΅��^G�^O'�u�>
-���^A-�p�N����0Ť��.�O^D^H�
-�AC�^D�(^S\&5K������Bx^W�N4���w3t!^[�^\�d�Y*M�f����ɺs�r�,6^Gp>
-]�X�@�^H̔^\^V��/�^OڏڵX�8�j�P^[F1���`^X���(�V��1��D��$���Z:��k
-zF�gʚ|-�2�43�v�Q)�^P���7�bd^T7�=P^\ش�=2��^Gj���^H��^Q�����;��̉>
-oR&��RPX^V���K?�^S�9��B��kS;^KѾ��:�5f�u!H���� �Xlَ?W��D^X�88��>
-�^[SH`��^R"ʺ��2�߉�b���_�g�:����ϫ^T��a�ޗ�^@��7^\O�æ#+��:eK�^C>
-��?�|V^N�6i�!^?�f杭^LD���Y�d��� �^K;��"�Z����|�ɗ.�^Ka���$3��^>
-�       ^YN�Fj'�ҧf�T
-�K�L^F�,u��}Yr�խ�%�^��?ʜ��B�(ܻ��;^T��Y�((P��P
-��-ܴ^[^]�^PM^Q^C�^B��Q^^���
-{�U?֗^^��^H��ɦ0IVP�^[㛛^LpgC�X��-^R� VU-0�Wb�!^V�C:!����^KPS39�
-_ѷ�^NB
-zE<̏2#�2H^T�� U�j^LwO�x,^@gd�J��6��
-�����s���
-�'�zd����^V�ܪE�$^\h��^\��v^��ĕ^E��^Y��^AQp�b�^U�R^H^]"�o��!�e>
-#&o�6�,P�
-i4D[�D̹e�I�^^�g��X��^K��x�Q�f
-���^T�YR�������S@+V?k�N�O��^B�"o[^C*�.$Y�^]��J����x0�^U��^]��>
-*�˳^X5ܶ�)�,���~��eL�����^A���]^A���C�때?>��X^_w^A����`O�Oo�`�">
-�@="�b�e��^X^N0@��<�)�
-�K(�|������t�0��U��^?F������    �^WLS�U~Ldm�2R��:^Epmw��^_(>h>
+import requests
+import random
+import time
+import os
+from colorama import Fore
+
+print("   _____             ____  _                   ")
+print("  |__  /__ _  __ _  / ___|| |_ ___  _ __ ___   ")
+print("    / // _` |/ _` | \___ \| __/ _ \| '__/ _ \  ")
+print("   / /| (_| | (_| |  ___) | || (_) | | |  __/  ")
+print("  /____\__,_|\__,_| |____/ \__\___/|_|  \___|  \n")
+print("=================================================")
+author = "Zaa レム"
+print("Author : " + author)
+script = "Auto Post Discord"
+print("Script : " + script)
+discord = "Zaa Store"
+print("Discord Name : " + discord)
+dcurl = "https://discord.gg/GU3kzPRask"
+print("Discord Url : " + dcurl)
+print("===========================================")
+print('YANG RESELL ANAK YATIM')
+print("===========================================\n")
+
+time.sleep(1)
+
+channel_id = input("Masukkan ID channel: ")
+time1 = int(input("Set Time Post 1 : "))
+time2 = int(input("Set Time Post 2 : "))
+time3 = int(input("Set Time Post 3 : "))
+
+time.sleep(1)
+print("3")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("1")
+time.sleep(1)
+
+os.system('cls' if os.name == 'nt' else 'clear')
+
+with open("pesan.txt", "r") as f:
+    words = f.read()
+
+with open("token.txt", "r") as f:
+    authorization = f.readline().strip()
+
+while True:
+        channel_id = channel_id.strip()
+
+        payload = {
+            'content': words.strip()
+        }
+
+        headers = {
+            'Authorization': authorization
+        }
+
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
+        print(Fore.WHITE + "Sent message: ")
+        print(Fore.YELLOW + payload['content'])
+
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
+
+        if response.status_code == 200:
+            messages = response.json()
+            if len(messages) == 0:
+                is_running = False
+                break
+            else:
+                time.sleep(time1)
+
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
+        print(Fore.WHITE + "Sent message: ")
+        print(Fore.YELLOW + payload['content'])
+
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
+
+        if response.status_code == 200:
+            messages = response.json()
+            if len(messages) == 0:
+                is_running = False
+                break
+            else:
+                time.sleep(time2)
+
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
+        print(Fore.WHITE + "Sent message: ")
+        print(Fore.YELLOW + payload['content'])
+
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
+
+        if response.status_code == 200:
+            messages = response.json()
+            if len(messages) == 0:
+                is_running = False
+                break
+            else:
+                time.sleep(time3)
+
