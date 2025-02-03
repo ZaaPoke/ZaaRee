@@ -24,10 +24,14 @@ print("===========================================\n")
 
 time.sleep(1)
 
-channel_id = input("Masukkan ID channel: ")
-time1 = int(input("Set Time Post 1 : "))
-time2 = int(input("Set Time Post 2 : "))
-time3 = int(input("Set Time Post 3 : "))
+channel_id = input("Masukkan ID channel 1 : ")
+channel_id2 = input("Masukkan ID channel 2 : ")
+channel_id3 = input("Masukkan ID channel 3 : ")
+time.sleep(1)
+print(" Waktu Satuan Detik, Contoh 60 = 1 menit, 3600 = 1 jam")
+time1 = int(input("Set Time 1 : "))
+time2 = int(input("Set Time 2 : "))
+time3 = int(input("Set Time 3 : "))
 
 time.sleep(1)
 print("3")
@@ -47,6 +51,8 @@ with open("token.txt", "r") as f:
 
 while True:
         channel_id = channel_id.strip()
+        channel_id2 = channel_id2.strip()
+        channel_id3 = channel_id3.strip()
 
         payload = {
             'content': words.strip()
@@ -57,10 +63,14 @@ while True:
         }
 
         r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id2}/messages", data=payload, headers=headers)
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id3}/messages", data=payload, headers=headers)
         print(Fore.WHITE + "Sent message: ")
         print(Fore.YELLOW + payload['content'])
 
         response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id2}/messages', headers=headers)
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id3}/messages', headers=headers)
 
         if response.status_code == 200:
             messages = response.json()
@@ -71,10 +81,14 @@ while True:
                 time.sleep(time1)
 
         r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id2}/messages", data=payload, headers=headers)
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id3}/messages", data=payload, headers=headers)
         print(Fore.WHITE + "Sent message: ")
         print(Fore.YELLOW + payload['content'])
 
         response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id2}/messages', headers=headers)
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id3}/messages', headers=headers)
 
         if response.status_code == 200:
             messages = response.json()
@@ -85,10 +99,14 @@ while True:
                 time.sleep(time2)
 
         r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id2}/messages", data=payload, headers=headers)
+        r = requests.post(f"https://discord.com/api/v9/channels/{channel_id3}/messages", data=payload, headers=headers)
         print(Fore.WHITE + "Sent message: ")
         print(Fore.YELLOW + payload['content'])
 
         response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id2}/messages', headers=headers)
+        response = requests.get(f'https://discord.com/api/v9/channels/{channel_id3}/messages', headers=headers)
 
         if response.status_code == 200:
             messages = response.json()
